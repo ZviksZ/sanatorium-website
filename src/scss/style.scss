@@ -1,0 +1,115 @@
+// переменные
+@import 'variables';
+
+// Шрифты
+@import 'fonts';
+
+// медиа-запросы
+@import 'mediaqueries';
+
+// иконочный шрифт
+@import 'icons';
+
+// обнуления отступов, margin и т.п.
+@import 'helper';
+
+// сетка
+@import 'grid';
+
+// базовые стили шаблона
+@import 'base';
+
+// типографика контента
+@import 'typographic';
+
+// preloader
+@import 'preloader';
+
+// типографика форм
+@import 'forms';
+
+//header
+@import 'header';
+
+//footer
+@import 'footer';
+
+//главные блоки страниц с информацией
+@import 'head-info';
+
+//позиционирование информации
+@import 'infographic';
+
+//Блок переключения услуг на главной странице.
+@import 'choice-points';
+
+//кнопки.
+@import 'buttons';
+
+//Акции.
+@import 'stocks';
+
+//Преимущества.
+@import 'advantages';
+
+//Видео
+@import 'video';
+
+//Слайдер
+@import 'sliders';
+
+//Галерея
+@import 'gallery';
+
+//Блок с отправкой вопроса.
+@import 'question';
+
+//Стили для компонента Tabs
+@import 'tabs';
+
+//Стили для Select
+@import 'select';
+
+//Стили для программ
+@import 'programs';
+
+//Стили для текстовых блоков
+@import 'text-content';
+
+//Стили для карты
+@import 'map';
+
+//Хлебные крошки
+@import 'breadcrumbs';
+
+//Инфо-блок с иконками
+@import 'info-icons';
+
+//Блок с лиценнзиями
+@import 'docs';
+
+//Doctors page
+@import 'doctors';
+@import 'doctors-detail';
+@import 'table';
+
+//Reviews page
+@import 'reviews';
+
+
+
+
+
+
+//Slick слайдер(стили).
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+
+// стили для формы бронирования
+@import 'booking';
+
+
+@import '../../node_modules/choices.js/public/assets/styles/choices.min.css';
+
+
+

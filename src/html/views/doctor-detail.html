@@ -1,0 +1,63 @@
+<% var data = {
+title: "Волжский утес"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="breadcrumbs">
+    <a href="/">Главная</a>
+    <a href="/">Санаторий</a>
+    <a href="/">Врачебный состав</a>
+    <span>Алексашин Михаил Александрович</span>
+</div>
+<div class="section s-block p-b-25 p-t-0 m-t-10">
+    <div class="container">
+        <h2 class="text-align-center m-t-15 m-b-0 h1">Алексашин Михаил Александрович</h2>
+    </div>
+</div>
+<div class="section s-block p-b-30 p-t-0">
+    <div class="container">
+        <div class="doctor-detail">
+            <div class="row">
+                <div class="col m-b-20">
+                    <div class="item">
+                        <div class="img">
+                            <img alt="3" src="./img/others/doctors/item-3.png">
+                        </div>
+                        <div class="desc m-t-25">
+                            <div class="pos text16">Врач-терапевт, врач-эндокринолог</div>
+                            <div class="unit m-t-10 m-b-10">Отделение «Терапия №1»</div>
+                            <div class="experience subtitle22">Стаж работы - 32 года</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <h3 class="h4 m-b-40">Сертификаты, документы о специализации и квалификационной категории:</h3>
+                <ul class="doctor-list">
+                    <li>
+                        Куйбышевский государственный медицинский институт, 1988 г. ПВ № 240895, лечебное дело;
+                    </li>
+                    <li>
+                        г.Самара Самарский государственный медицинский университет «Эндокринология» с 07.01.2005 г. по 16.05.2005г. Самарский государственный медицинский университет «Эндокринология»,
+                        576ч., диплом № 04480 «Эндокринология» от 16.05.2005 г.;
+                    </li>
+                    <li>
+                        сертификат «Эндокринология» от 17.05.2005г.;
+                    </li>
+                    <li>
+                        Куйбышевский государственный медицинский институт 1984 г., МВ № 215596, лечебное дело;
+                    </li>
+                    <li>
+                        г.Москва УНЦ «Ультразвуковая диагностика» с 26.07.1999 г. по 30.10.1999г. «Ультразвуковая диагностика» 102ч.;
+                    </li>
+                    <li>Сертификат «Ультразвуковая диагностика» 01.04.2005 г.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

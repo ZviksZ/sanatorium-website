@@ -1,0 +1,151 @@
+.footer{
+  display: block;
+  position: relative;
+  background: $colorPurple;
+  padding-top:30px;
+  font-weight: 800;
+  font-family: $fontBase;
+  .footer-logo{
+    text-align: center;
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .footer-number{
+    text-align: center;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 53px;
+      text-align: center;
+      color:$colorButton;
+      margin-top: 42px;
+      @include desktop {
+        &:after {
+          width: 0;
+          display: block;
+          content: '';
+          background: $colorButton;
+          height: 2px;
+          transition: 0.5s linear;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+  .footer-title{
+    font-size: 22px;
+    line-height: 29px;
+    color: $colorMain;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .footer-email{
+    text-align: center;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin-top:30px;
+      font-size: 16px;
+      line-height: 29px;
+      color:$colorMain;
+      text-align: center;
+      opacity: 0.5;
+    }
+  }
+  .social{
+    margin:0 auto;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    max-width: 250px;
+    a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+  .footer-attention{
+    margin-top:30px;
+    background: rgba(0, 0, 0, 0.2);
+    .icon {
+      font-size: 22px;
+      color: #ffffff;
+    }
+    &-link {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .attention-text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorMain;
+    opacity: 0.5;
+    text-align: center;
+    width:90%;
+  }
+  .attention-item{
+    width:25px;
+    height:22px;
+    background-image: url(../img/others/footer-icon.png);
+  }
+  .footer-attention-info{
+    display: flex;
+    align-items: center;
+    padding:23px 0;
+  }
+  @include mobile {
+    .footer-logo {
+      img {
+        width: 60%;
+      }
+    }
+    .footer-number {
+      margin-top: 15px;
+      a {
+        font-size: 34px;
+        margin-top: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .footer-title {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .footer-email {
+      font-size: 16px;
+      margin-top: 10px;
+      a {
+        margin-top: 0;
+      }
+    }
+    .footer-attention {
+      opacity: 1;
+      .footer-attention-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .attention-text {
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 0.03em;
+          color: $fontBase;
+        }
+      }
+    }
+  }
+}

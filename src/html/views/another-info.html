@@ -1,0 +1,68 @@
+<% var data = {
+title: "Волжский утес"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="breadcrumbs">
+    <a href="/">Главная</a>
+    <a href="/">Санаторий</a>
+    <span>Акции</span>
+</div>
+<div class="section s-block p-b-0 p-t-0">
+    <div class="container">
+        <h2 class="text-align-center m-t-15 m-b-30 h1">Акции</h2>
+        <div class="submenu m-b-30 p-b-25">
+            <a href="/">О санатории</a>
+            <a href="/">Врачебный состав</a>
+            <a href="/">Отзывы</a>
+            <a href="/">История</a>
+            <a href="/">Карта санатория</a>
+            <a href="/">Сертификаты</a>
+            <a href="/" class="submenu__active">Акции</a>
+            <a href="/">Конференции</a>
+            <a href="/">Правила проживания</a>
+        </div>
+    </div>
+</div>
+
+<div class="section p-t-0">
+    <div class="container">
+        <div class="stock__slider">
+            <div class="row">
+                <!-- Если нужно по центру -добавить к "col w-50" классы m-0-auto и float-none-->
+                <div class="col">
+                    <div class="stock__slider-item m-b-30 section-grey-bg">
+                        <div class="row">
+                            <div class="col stock__right">
+                                <h4 class="subtitle22">Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи в самарской области на 2019 год и на плановый период 2020 и 2021 годов</h4>
+                                <p>
+                                    При условии пребывания не менее 7 дней. Размещение во 2 корпусе. Лечение по программе "Стандарт". В стоимость входит: проживание, 3-разовое питание, лечение по
+                                    назначению врача (от 7 дней пребывания), бассейн.
+                                </p>
+                                <a class="button" href="#">подробнее</a>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                    <div class="stock__slider-item m-b-30 section-grey-bg">
+                        <div class="row">
+                            <div class="col stock__right">
+                                <h4 class="subtitle22">Территориальная программа гания </h4>
+                                <p>
+                                    назначению врача (от 7 дней пребывания), бассейн.
+                                </p>
+                                <a class="button" href="#">подробнее</a>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

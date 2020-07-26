@@ -1,0 +1,96 @@
+.doctor-detail {
+    width: 80%;
+    margin: 0 auto;
+    .item {
+        padding: 30px 20px 5px;
+        text-align: center;
+        .img {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            &.img-default {
+                background: #DFE1E2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-size: 180px;
+                    color: #CACFD1;
+                }
+            }
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        .desc {
+            .pos {
+                overflow: hidden;
+                color: $colorGray;
+            }
+            .unit {
+                font-family: $fontBase;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: $colorPurple;
+            }
+            .experience {
+                color: $colorButton;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @include mobile {
+        width: 100%;
+        .item {
+            .img {
+                width: 180px;
+                height: 180px;
+                &.img-default {
+                    span {
+                        font-size: 100px;
+                    }
+                }
+            }
+            .unit {
+                margin-top: 10px !important;
+            }
+        }
+    }
+}
+
+.doctor-list {
+    list-style: none;
+    padding-left: 0;
+    li {
+        font-family: $fontBase;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        color: #000000;
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 25px;
+        &:before {
+            display: block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: $colorButton;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+        @include mobile {
+            margin-bottom: 15px;
+        }
+    }
+}

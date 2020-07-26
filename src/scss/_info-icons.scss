@@ -1,0 +1,160 @@
+.info-icons {
+    .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &.info-icons__big {
+        .item {
+            .icon {
+                color: $colorButton;
+                font-size: 36px;
+                display: inline-block;
+            }
+            .text {
+                display: inline-block;
+                margin-left: 28px;
+                font-family: $fontBase;
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 29px;
+                letter-spacing: .03em;
+                color: #000;
+            }
+        }
+    }
+    &.info-icons__small {
+        .item {
+            .icon {
+                color: $colorButton;
+                font-size: 20px;
+                display: inline-block;
+            }
+            .text {
+                display: inline-block;
+                margin-left: 28px;
+                font-family: $fontBase;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 29px;
+                letter-spacing: .03em;
+                color: #000;
+            }
+        }
+    }
+    &.info-icons__about {
+        .info-icons__main {
+            text-align: center;
+
+            @include mobile {
+                padding: 0 7%;
+                img {
+                    width: 100%;
+                }
+            }
+            @include tablet {
+                padding: 0 25%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .icon {
+                color: $colorButton;
+                font-size: 60px;
+            }
+            .text.h1 {
+                color: #000000;
+                width: 100%;
+                text-align: center;
+                margin: 23px 0 0;
+                @include mobile {
+                    font-size: 42px;
+                }
+            }
+            .text.text16 {
+                text-align: center;
+            }
+        }
+    }
+    &.info-icons__contacts {
+        .item {
+            margin-bottom: 70px;
+            flex-wrap: wrap;
+            padding-left: 90px;
+            position: relative;
+            @include mobile {
+                padding-left: 70px;
+            }
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: $colorButton;
+                font-size: 60px;
+                @include mobile {
+                    font-size: 45px;
+                }
+            }
+            .text {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-family: $fontBase;
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 29px;
+                    letter-spacing: .03em;
+                    color: $colorText;
+                    @include mobile {
+                        font-size: 18px;
+                    }
+                    @include desktop {
+                        &:after {
+                            display: block;
+                            content: '';
+                            transition: 0.5s linear;
+                            width: 0;
+                            height: 2px;
+                            background: $colorText;
+                        }
+                        &:hover {
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .small-text {
+                display: inline-block;
+                font-family: $fontBase;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                color: $colorGray;
+                width: 100%;
+                margin-bottom: 8px;
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+            .social{
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    margin-right: 40px;
+                    @include mobile {
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

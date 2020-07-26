@@ -1,0 +1,38 @@
+.docs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .item {
+        width: 190px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding-left: 10px;
+        padding-right: 10px;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+    @include desktop-small {
+        .item {
+            width: 19%;
+            margin-right: 1%;
+        }
+    }
+    @include mobile {
+        .item {
+            width: auto;
+            padding: 0 20px;
+        }
+    }
+    @include mobile-small {
+        justify-content: flex-start;
+        .item {
+            width: 45%;
+            padding: 0;
+            margin: 0 2.5% 15px;
+
+        }
+    }
+}

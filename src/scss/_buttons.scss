@@ -1,0 +1,66 @@
+.section .button,
+.header__main-menu .button,
+.footer .button{
+  display: inline-block;
+  padding: 16px;
+  margin: 30px 0;
+  background: $colorButton;
+  font-family: $fontBase;
+  font-size: 14px;
+  font-weight: 800;
+  color: $colorMain;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: 0.3s linear;
+  text-transform: uppercase;
+  letter-spacing: 0.23em;
+  @include desktop{
+    &:hover {
+      background: #CDB757;
+    }
+  }
+  @include tablet-mobile{
+    font-size: 12px;
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
+  &.disabled {
+    background: #C4C4C4;
+  }
+}
+.button-custom{
+  display: inline-block;
+  padding: 16px;
+  margin: 30px 0;
+  background: $colorButton;
+  font-family: $fontBase;
+  font-size: 14px;
+  font-weight: 800;
+  color: $colorMain;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: 0.3s linear;
+  text-transform: uppercase;
+  letter-spacing: 0.23em;
+  @include desktop{
+    &:hover {
+      background: #CDB757;
+    }
+  }
+  @include tablet-mobile{
+    font-size: 12px;
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
+  &.disabled {
+    background: #C4C4C4;
+  }
+}

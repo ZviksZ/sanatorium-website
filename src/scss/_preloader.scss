@@ -1,0 +1,148 @@
+.with-preloader-block {
+    background: #ffffff;
+    &:before {
+        content: "";
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -20px;
+        width: 40px; height: 40px;
+        background: url('../img/preloader.svg') center center no-repeat;
+        background-size: cover;
+        -webkit-animation: rotating 2s linear infinite;
+        -moz-animation: rotating 2s linear infinite;
+        -ms-animation: rotating 2s linear infinite;
+        -o-animation: rotating 2s linear infinite;
+        animation: rotating 2s linear infinite;
+    }
+
+    &.load {
+        position: relative;
+        min-height: 300px;
+        max-height: 695px;
+        overflow: hidden;
+
+        * {
+            visibility: hidden;
+            transition: none;
+        }
+
+        &:before {
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*.preloader {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #121212;
+    overflow: hidden;
+    transition: transform 1s ease;
+    transition-delay: 1s;
+
+    .logo {
+        img {
+            display: block;
+            margin: 0;
+            width: 11.1vh;
+            height: 11.1vh;
+
+            @include mobile {
+                width: 11.1vmax;
+                height: 11.1vmax;
+            }
+        }
+    }
+
+    .text {
+        margin: 3vh 0 0 0;
+        min-height: 6vh;
+        font-size: 2vh;
+        line-height: 1.5em;
+        text-align: center;
+        color: $colorText;
+
+        @include mobile {
+            margin-top: 3vmax;
+            font-size: 2vmax;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+
+}
+
+.show-preloader {
+    .preloader {
+        .content {
+            opacity: 1;
+        }
+    }
+}
+
+.hide-preloader {
+    .preloader {
+        display: none;
+    }
+}
+
+.show-main {
+    .preloader {
+        transition-delay: 1s;
+        transform: translateX(120%) skewX(-25deg);
+
+        @include mobile {
+            transform: translateX(150%) skewX(-25deg);
+        }
+    }
+}*/

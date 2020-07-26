@@ -1,0 +1,44 @@
+.text-content {
+    p {
+        &.black {
+            color: #000000;
+        }
+    }
+    .text-list {
+        padding-left: 18px;
+        li {
+            margin: 15px 0;
+            font-size: 16px;
+            line-height: 1.8em;
+            color: $colorGray;
+            font-weight: 400;
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+    }
+    .item {
+        margin-bottom: 35px;
+        h3 {
+            font-family: $fontBase;
+            font-size: 16px;
+            line-height: 29px;
+            letter-spacing: 0.03em;
+            margin: 0 0 5px;
+            font-weight: 800;
+            color: $colorText;
+        }
+
+        @include desktop {
+            p {
+                font-family: $fontBase;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 29px;
+                letter-spacing: 0.03em;
+                color: $colorGray;
+                margin: 0 0 5px;
+            }
+        }
+    }
+}

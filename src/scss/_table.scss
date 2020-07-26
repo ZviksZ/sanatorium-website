@@ -1,0 +1,36 @@
+.table-wrap {
+    @include mobile {
+        overflow-x: scroll;
+    }
+    .section-table {
+        border-collapse: collapse;
+        min-width: 650px;
+        &.table-70 {
+            width: 70%;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        th, tr {
+            font-size: 15px;
+            line-height: 23px;
+            color: #000;
+            margin: 0 0 5px;
+        }
+        th {
+            background: #F4F4F4;
+            border: 1px solid rgba(77,77,77,.5);
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            border: 1px solid rgba(77,77,77,.5);
+            padding: 10px;
+            font-weight: 700;
+            &:not(:first-child) {
+                color: #00a3ff;
+            }
+        }
+    }
+}
+

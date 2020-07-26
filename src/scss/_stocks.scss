@@ -1,0 +1,101 @@
+.stock__slider {
+    font-family: $fontBase;
+    .stock__left {
+        background-size: cover;
+        background-position: center;
+        float: left;
+        &:before{
+            content: " ";
+            display: block;
+            float: left;
+            margin: 0;
+            padding-top: 54%;
+        }
+    }
+    .stock__right {
+        padding: 50px 60px 20px;
+        .subtitle22 {
+            margin: 0;
+            text-transform: lowercase;
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+        .stock__dates {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $colorButton;
+            text-transform: initial;
+        }
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 178.9%;
+            letter-spacing: 0.03em;
+            color: $colorGray;
+            text-transform: initial;
+        }
+    }
+    .stock__slider-item {
+        .row {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    @include desktop-small{
+        &.slick-dotted.slick-slider {
+            margin-bottom: 10px;
+        }
+        .stock__right {
+            padding-top: 0;
+            padding-bottom: 0;
+            .button {
+                margin: 10px 0;
+            }
+        }
+    }
+    @include tablet-mobile{
+        &.slick-dotted.slick-slider {
+            margin-bottom: 10px;
+        }
+        .col.w-50 {
+            &.stock__right {
+                padding: 0 20px;
+            }
+        }
+    }
+    @include mobile{
+        .col.w-50 {
+            margin-bottom: 10px;
+            &.stock__right {
+                padding: 0 10px;
+                .subtitle22 {
+                    font-size: 16px;
+                    font-weight: 800;
+                }
+                .stock__dates {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 178.9%;
+                }
+            }
+        }
+    }
+}
+
+.discount-detail__img {
+    display: block;
+    margin: 0 auto 30px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}

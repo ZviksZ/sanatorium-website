@@ -1,0 +1,12 @@
+.tabs-block .tab {
+    display: none;
+}
+.tabs-block .tab-btn {
+    display: none;
+}
+.tabs-block .tab.active {
+    display: block;
+}
+.tabs-block .tab-btn.active {
+    display: inline-block;
+}

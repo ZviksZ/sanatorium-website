@@ -1,0 +1,29 @@
+.map {
+    width: 100%;
+    height: 582px;
+    @include desktop-small{
+        height: 355px;
+    }
+    @include tablet-mobile {
+        height: 300px;
+    }
+}
+.map-wrapper {
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 680px;
+    }
+}
+@include mobile {
+    .map-block {
+        padding-bottom: 10px !important;
+        margin-bottom: 0 !important;
+    }
+}
+@include tablet {
+    .map-block {
+        padding-bottom: 30px !important;
+        margin-bottom: 0 !important;
+    }
+}

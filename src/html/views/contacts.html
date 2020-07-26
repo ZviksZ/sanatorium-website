@@ -1,0 +1,242 @@
+<% var data = {
+title: "Волжский утес"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="breadcrumbs">
+    <a href="/">Главная</a>
+    <span>Контакты</span>
+</div>
+<div class="section p-all-0 m-t-0">
+    <div class="container">
+        <h2 class="text-align-center m-t-25 m-b-25">Контакты</h2>
+    </div>
+</div>
+
+<div class="section sections-block p-b-0">
+    <div class="container">
+        <div class="info-icons info-icons__contacts">
+            <div class="row">
+                <div class="col w-50 w-50-tablet ">
+                    <div class="item">
+                        <span class="icon icon-001-location"></span>
+                        <span class="small-text">Адрес</span>
+                        <span class="text subtitle22">
+                            446740, Самарская обл., Шигонский р-н,
+                            поселок «Волжский Утес», ФГБУ «Санаторий
+                            «Волжский утес»
+                        </span>
+                    </div>
+                </div>
+                <div class="col w-50 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-003-phone"></span>
+                        <span class="small-text">Звонок по России бесплатный</span>
+                        <span class="text subtitle22">
+                            <a href="tel:88002002643">8 (800) 200-26-43</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-50 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-002-email"></span>
+                        <span class="small-text">E-mail отдела бронирования</span>
+                        <span class="text subtitle22">
+                            <a href="mailto:volgacliff@mail.ru">volgacliff@mail.ru</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col w-50 w-50-tablet">
+                    <div class="item p-l-0">
+                        <span class="small-text">Санаторий в соцсетях</span>
+                        <div class="social">
+                            <a href="">
+                                <img src="./img/others/social/vk.svg" alt="vk">
+                            </a>
+                            <a href="">
+                                <img src="./img/others/social/instagram.svg" alt="instagram">
+                            </a>
+                            <!--<a href="">
+                                <img src="./img/others/social/facebook.svg" alt="facebook">
+                            </a>
+                            <a href="">
+                                <img src="./img/others/social/ok.svg" alt="ok">
+                            </a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section p-all-0">
+    <div id="map" class="map"></div>
+</div>
+
+<div class="section sections-block p-t-30 m-b-50">
+    <div class="container">
+        <h2 class="m-t-0">Как добраться</h2>
+        <div class="text-content">
+            <h3 class="subtitle22">Автобус:</h3>
+            <div class="item">
+                <h3>г. Самара</h3>
+                <p>От Центрального Автовокзала (ул. Авроры 207) ежедневно в 16.00 рейс № 568 до п. Волжский Утес. (время в пути 04.00 часа).</p>
+            </div>
+            <div class="item">
+                <h3>г. Тольятти</h3>
+                <p>Автобус «Тольятти-Усолье» (с заходом в «Волжский утес»). Время отправления с автостанции Автозаводского р-на, расположенной по ул. Революционной в 8:05 (ежедневно), 15:00 (пт, сб,
+                    вс). Отправление с Центрального автовокзала (ул. Родины, Центральный район) в 8:40 (ежедневно), 15:35 (пт, сб, вс).
+                </p>
+            </div>
+            <div class="item">
+                <h3>г. Сызрань</h3>
+                <p>От привокзальной площади железнодорожной станции «Сызрань-1» ежедневно в 11.30 и 18.30.
+                </p>
+            </div>
+            <h3 class="subtitle22">Железнодорожный путь:</h3>
+            <div class="item">
+                <h3>г. Москва</h3>
+                <p>С Казанского вокзала (м. Комсомольская) ежедневно поезда № 010, 014, 032, 040, 050, 066, 132 до станции «Сызрань-1». (время в пути от 12.00 до 15.00 часов). Далее автобусом по
+                    расписанию.
+                </p>
+            </div>
+            <div class="item">
+                <h3>г. Санкт-Петербург</h3>
+                <p>По четным числам поезд № 337 до станции «Сызрань-1» (время в пути 36.00 часов). По нечетным числам поезд № 107 до станции «Сызрань-1» (время в пути 29.00 часов). Далее автобусом по
+                    расписанию.
+                </p>
+            </div>
+            <div class="item">
+                <p>Для формирования группового трансфера с привокзальной площади железнодорожной станции "Сызрань-1" просьба сообщать администратору санатория (тел. 8-800-200-26-43) о дате и времени
+                    прибытия. При наличии заявок на групповой трансфер время отправления автобуса с привокзальной площади железнодорожной станции «Сызрань-1» в 09.00 часов (время самарское).
+                </p>
+            </div>
+            <div class="item">
+                <p>Стоимость билета на автобус по маршруту «Сызрань - Волжский утес» составляет 190 рублей.
+                </p>
+            </div>
+            <h3 class="subtitle22">Самолет:</h3>
+
+            <div class="item">
+                <p>До аэропорта «Курумоч» (г. Самара) далее трансфером санатория (расстояние до санатория 170 км).</p>
+            </div>
+            <h3 class="subtitle22">Автостоянка:</h3>
+            <div class="item">
+                <p>На территории санатория для гостей расположена круглосуточно охраняемая стоянка. Стоимость стоянки автомобиля 85 рублей/сутки.
+                </p>
+            </div>
+            <div class="item">
+                <p>Возможен индивидуальный трансфер при предварительном <br>
+                    бронировании по телефону <a href="tel:88002002643">8-800-200-26-43</a> <br>
+                    (Звонок бесплатный по России)</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section p-t-0 p-b-0">
+    <div class="container container-nopadding">
+        <div class="row question">
+            <div class="col w-60">
+                <div class="position">
+                    <h2 class="text-align-center color-white">
+                        Удачное расположение
+                    </h2>
+                    <p class="text-align-center">
+                        В живописном районе Самарской области в большом лесном
+                        массиве на берегу Жигулевского моря
+                    </p>
+                </div>
+            </div>
+            <div class="col w-40 block-inputs with-preloader-block">
+                <div id="submit-message" class="d-none">
+                    <span class="icon icon-check d-none"></span>
+                    <span class="icon icon-close d-none"></span>
+                    <span class="submit-message-text"></span>
+                </div>
+                <form action="#ajax_url" class="question-iputs" id="feedback_form">
+                    <h2 class="text-align-center m-t-0 m-b-0">
+                        Задайте вопрос
+                    </h2>
+                    <p class="text-align-center">
+                        О Вашем лечении и отдыхе. Свяжитесь с нами и наши
+                        специалисты ответят вам в ближайшее время
+                    </p>
+                    <label class="field">
+                        <input autocapitalize="none" autocomplete="off"
+                               autocorrect="off" class="input-text placeholder validate input-mask" data-mask_tpl="phone_plus7"
+                               data-placeholder="Мобильный телефон" data-validate="mobile_phone" id="feedback_phone"
+                               name="feedback_phone" type="text" value="">
+                        <p class="error-message"></p>
+                    </label>
+
+                    <label class="field">
+                            <textarea class="textarea placeholder validate" data-placeholder="Ваш вопрос"
+                                      data-validate="required"
+                                      id="feedback_text" name="feedback_text"></textarea>
+                        <p class="error-message"></p>
+                    </label>
+
+                    <button class="button width-100 m-t-0" type="submit">
+                        Отправить
+                    </button>
+
+                    <p class="medium-text">
+                        Нажимая кнопку «Отправить» вы соглашаетесь с нашей<br>
+                        <a class="custom-link" href="/" target="_blank">политикой конфиденциальности</a>
+                        и
+                        <a class="custom-link" href="/" target="_blank">обработкой персональных данных.</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section sections-block p-t-10 m-b-0 p-b-30 section-grey-bg">
+    <div class="container">
+        <div class="text-content">
+            <div class="item">
+                <h3>Государственная регистрация:</h3>
+                <p>08 июля 2011 года, Межрайонная ИФНС №3 по Самарской области; свидетельство о внесении записи в Единый государственный реестр юридических лиц МИФНС России № 3 по Самарской области
+                    Серия 63№ 005376602 за государственным регистрационным номером 2116325022130.
+                </p>
+            </div>
+            <div class="item">
+                <h3>Лицензия на осуществлениемедицинской деятельности:</h3>
+                <p>№ ФС-63-01-001505 от 19 февраля 2015 года (Серия ФС 0008677); срок действия: бессрочно; выдана Федеральной службой по надзору в сфере здравоохранения (109074, Москва, Славянская
+                    площадь, д.4, стр.1, тел. (495) 698-45-38; (499) 578-02-30).
+
+                </p>
+            </div>
+            <div class="item">
+                <h3>Виды медицинской деятельности:</h3>
+                <p>Доврачебная помощь: диетология, лабораторная диагностика, лечебное дело, лечебная физкультура, медицинский массаж, медицинская статистика, рентгенология, сестринское дело,
+                    стоматология ортопедическая, физиотерапия, функциональная диагностика, лабораторное дело. Санаторно-курортная помощь: акушерство и гинекология, гериатрия, диетология, кардиология,
+                    клиническая лабораторная диагностика, лечебная физкультура и спортивная медицина, мануальная терапия, неврология, отоларингология, офтальмология, рентгенология, рефлексотерапия,
+                    стоматология терапевтическая, терапия, ультозвуковая диагностика, физиотерапия, гастроэнтерология, педиатрия, стоматология, травматология и ортопедия, функциональная диагностика,
+                    эндоскопия, эндокринология, восстановительная медицина. Прочие работы и услуги: гипербарическая оксигенация, экспертиза временной нетрудоспособности, предрейсовые медицинские
+                    осмотры водителей транспортных средств.
+
+                </p>
+            </div>
+            <div class="item">
+                <h3>Территориальный орган Федеральной службы по надзору в сфере здравоохранения по Самарской области:</h3>
+                <p>443041, г. Самара, ул. Арцыбушевская, д.13 (4-ыйэтаж) телефон: (846) 333-20-87 e-mail: samara_zdravnadz@mail.ru <br>
+                    Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Самарской области: <br>
+                    443079, г. Самара, проезд Георгия Митирёва, дом 1 телефон: 260-38-25 e-mail: sancntr@fsnsamara.ru
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

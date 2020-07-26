@@ -1,0 +1,254 @@
+.gallery {
+    .gallery__item {
+        cursor: pointer;
+        position: relative;
+    }
+    .gallery__item.hidden {
+        display: none;
+    }
+    .item {
+        position: relative;
+        margin-bottom: 24px;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:before {
+            content: '';
+            display: block;
+            margin: 0;
+            float: left;
+            padding-top: 67%;
+        }
+        .yellow-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(219, 190, 63, 0.7), rgba(219, 190, 63, 0.7));
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            transition: 0.5s linear;
+            object-fit: cover;
+        }
+    }
+    .more-item {
+        background: url(../img/others/gallery/more-item-bg.png) no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        span {
+            font-family: $fontBase;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 53px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $colorMain;
+            z-index: 1;
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+    }
+}
+.gallery__slider {
+    display: none;
+}
+.gallery-slider-open, .license-slider-open {
+    .gallery__slider {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1111;
+        background: rgba(0, 0, 0, 0.8);
+        .gallery__slider-wrapper {
+            width: 55%;
+            margin: 50px auto;
+            position: relative;
+            .gallery-prev, .gallery-next {
+                position: absolute;
+                top: 35%;
+                display: inline-block;
+                z-index: 3;
+                cursor: pointer;
+                span {
+                    color: $colorMain;
+                    font-size: 25px;
+                }
+            }
+            .gallery-prev {
+                left: -45px;
+                transform: rotate(-90deg);
+            }
+            .gallery-next {
+                right: -45px;
+                transform: rotate(90deg);
+            }
+            .gallery__slider-big {
+                .item {
+                    max-height: 650px;
+                    overflow: hidden;
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+            .gallery__slider-small {
+                margin-top: 15px;
+                .slick-slide {
+                    padding: 0 5px;
+                    .item {
+                        border: 3px solid transparent;
+                        box-sizing: border-box;
+                        height: 120px;
+
+                        overflow: hidden;
+                    }
+                    &.slick-current {
+                        .item {
+                            border: 3px solid $colorButton;
+                        }
+                    }
+                }
+            }
+            .gallery__slider-close {
+                position: absolute;
+                right: -55px;
+                top: 0;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                &:before, &:after {
+                    position: absolute;
+                    left: 15px;
+                    content: ' ';
+                    height: 33px;
+                    width: 3px;
+                    background-color: #fff;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            .item {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+            }
+            @include mobile {
+                width: 90%;
+                margin-top: 50px;
+                .gallery__slider-close {
+                    right: -5px;
+                    top: -50px;
+                }
+                .gallery-prev,.gallery-next {
+                    opacity: 0;
+                }
+            }
+            @include tablet {
+                width: 70%;
+                margin-top: 20px;
+                .gallery__slider-close {
+                    right: -55px;
+                    top: 0;
+                }
+                .gallery-prev,.gallery-next {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.gallery-slider-open {
+    .license-slider {
+        display: none;
+    }
+}
+.license-slider-open {
+    .gallery__slider {
+        .gallery__slider-small, .gallery__slider-big {
+            display: none;
+        }
+        .license-slider {
+            width: 50%;
+            margin: 0 auto;
+            @include tablet {
+                width: 65% !important;
+            }
+            @include desktop-small {
+                width: 70% !important;
+            }
+            @include only-mobile {
+                width: 80%;
+            }
+        }
+        .gallery__slider-wrapper {
+            @include tablet {
+                margin-top: 50px;
+            }
+            .gallery__slider-close {
+                position: absolute;
+                right: 80px;
+                top: 0;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                @include desktop-small {
+                    top: -40px;
+                    right: 10px;
+                }
+                @include mobile {
+                    top: -40px;
+                    right: 10px;
+                }
+            }
+            .gallery-prev {
+                left: 100px;
+                transform: rotate(-90deg);
+                @include desktop-small {
+                    left: -20px;
+                }
+                @include mobile {
+                    left: -20px;
+                    opacity: 1;
+                }
+            }
+            .gallery-next {
+                right: 100px;
+                transform: rotate(90deg);
+                @include desktop-small {
+                    right: -20px;
+                }
+                @include mobile {
+                    right: -20px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

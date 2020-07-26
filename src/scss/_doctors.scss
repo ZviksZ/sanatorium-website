@@ -1,0 +1,73 @@
+.doctors {
+    .item {
+        padding: 30px 20px 45px;
+        text-align: center;
+        .img {
+            display: block;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            text-decoration: none;
+            &.img-default {
+                background: #DFE1E2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-size: 180px;
+                    color: #CACFD1;
+                }
+            }
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        .desc {
+            .name {
+                display: block;
+                max-height: 92px;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                overflow: hidden;
+                text-decoration: none;
+            }
+            .pos {
+                height: 58px;
+                overflow: hidden;
+            }
+            .unit {
+                font-family: $fontBase;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: $colorPurple;
+                height: 18px;
+            }
+            .experience {
+                color: $colorButton;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+
+    @include mobile {
+        .item {
+            .img {
+                width: 180px;
+                height: 180px;
+                &.img-default {
+                    span {
+                        font-size: 100px;
+                    }
+                }
+            }
+            .unit {
+                margin-top: 10px !important;
+            }
+        }
+    }
+}

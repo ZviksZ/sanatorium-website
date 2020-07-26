@@ -1,0 +1,43 @@
+<% var data = {
+title: "Волжский утес"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+
+
+<div class="section sections-block p-b-30 ">
+    <div class="container">
+        <div class="text-content">
+            <p class="text-align-center"><strong class="black">Таблица номеров</strong></p>
+
+        </div>
+        <div class="table-wrap">
+            <table class="section-table table-70">
+                <thead>
+                <tr>
+                    <th>Тип номера</th>
+                    <th>Вариант размещения</th>
+                    <th>Стоимость руб./сутки</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Стандарт</td>
+                    <td>4 950</td>
+                    <td>4 950</td>
+                </tr>
+                <tr>
+                    <td>Люкс</td>
+                    <td>14 950</td>
+                    <td>14 950</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

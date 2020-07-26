@@ -1,0 +1,323 @@
+// Типографика
+.section {
+    margin: 0;
+    padding: 50px 0 80px;
+    background-color: $colorWhite;
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include desktop-small{
+        padding-bottom: 60px;
+    }
+    @include tablet-mobile{
+        padding-bottom: 40px;
+    }
+    .custom-link {
+        text-decoration: none;
+        color: $colorLink;
+        display: inline-block;
+        transition: 0.5s linear;
+        &:hover {
+            color: darken($colorLink, 10%)
+        }
+    }
+    &.gray {
+        background: $colorGray;
+    }
+
+    .color-main {
+        color: $colorMain !important;
+    }
+
+    .color-gray {
+        color: $colorGray !important;
+    }
+
+    .color-error {
+        color: $colorError !important;
+    }
+
+    .color-white {
+        color: $colorWhite !important;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+    .color-btn{
+        color:$colorButton;
+    }
+
+    h1, .h1 {
+        margin: 50px 0;
+        font-size: 54px;
+        line-height: 1.5em;
+        font-weight: 400;
+        font-family: $fontAccent;
+        @include desktop-small{
+            margin: 40px 0;
+        }
+        @include tablet {
+            font-size: 42px;
+        }
+        @include mobile{
+            font-size: 32px;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    h2, .h2 {
+        margin: 50px 0;
+        font-size: 42px;
+        line-height: 1.5em;
+        font-weight: 400;
+        color: $colorText;
+        font-family: $fontAccent;
+        @include desktop-small{
+            margin: 40px 0;
+        }
+        @include mobile{
+            font-size: 32px;
+            margin: 25px 0;
+        }
+    }
+    h3, .h3{
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: $colorText;
+        font-family: $fontAccent;
+        @include mobile {
+            font-size: 26px;
+        }
+    }
+    .h4 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+        color: #000000;
+        font-family: $fontAccent;
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+    .subtitle22 {
+        font-family: $fontBase;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 29px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        @include desktop-small{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        @include tablet-mobile{
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+    .subtitle16 {
+        font-family: $fontBase;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 29px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        @include desktop-small{
+            font-weight: 700;
+            font-size: 14px;
+        }
+        @include tablet-mobile{
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+    .text16 {
+        font-family: $fontBase;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 29px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        @include desktop-small{
+            font-weight: 700;
+            font-size: 14px;
+        }
+        @include tablet-mobile{
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+    p {
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: 1.8em;
+        color: $colorGray;
+        font-weight: 400;
+
+        &.big-text,
+        .big-text {
+            font-size: 24px;
+            line-height: 1.5em;
+        }
+
+        &.medium-text,
+        .medium-text {
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+
+        &.small-text,
+        .small-text {
+            font-size: 12px;
+            line-height: 1.5em;
+        }
+        &.subtitle {
+            color: $colorText
+        }
+        .icon {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            &:before {
+                line-height: 1.5em;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+
+    a {
+        color: $colorLink;
+
+        @include desktop {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    b, strong {
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .line {
+        display: block;
+        margin: 0;
+        height: 1px;
+        background: $colorGray;
+    }
+
+    // переключатели
+    .toggle-block {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        .toggle-caption {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0 60px 0 0;
+
+            .arrow {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                top: 50%;
+                margin: -6px 0 0 0;
+                font-size: 12px;
+                color: $colorGray;
+            }
+        }
+
+        .toggle-button {
+            display: block;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .toggle-content {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+        .open-text {
+            display: block;
+        }
+        .close-text {
+            display: none;
+        }
+        &.open {
+            .arrow {
+                transform: rotate(-180deg);
+            }
+
+            .toggle-content {
+                display: block;
+            }
+            .open-text {
+                display: none;
+            }
+            .close-text {
+                display: block;
+            }
+        }
+
+        &.mobile-no-toggle {
+            @include mobile {
+                .toggle-caption {
+                    padding-right: 0;
+                }
+                .p-r-60 {
+                    padding-right: 10px !important;
+                }
+                .toggle-button {
+                    cursor: default;
+                }
+                .arrow {
+                    display: none;
+                }
+                .toggle-content {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .item{
+        font-family: $fontBase;
+        font-style: normal;
+        font-weight: 800 !important;
+        font-size: 11px;
+        line-height: 15px;
+        //text-align: center;
+        letter-spacing: 0.03em;
+        color:$colorMain;
+        .big-weight{
+            font-weight:800 !important;
+        }
+    }
+
+}

@@ -1,0 +1,339 @@
+<% var data = {
+title: "Волжский утес"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+
+<div id="search" class="search" style="background-image: url('./img/others/backgrounds/room-bg.png');">
+
+    <!-- Десптопная/плашнетная версия -->
+    <div class="container for-booking">
+        <div class="hide-mobile">
+            <div class="breadcrumbs breadcrumbs-white">
+                <a href="/">Главная</a>
+                <a href="/">Размещение в номерах</a>
+                <span>Джуниор сюит</span>
+            </div>
+            <p class="search-caption">Джуниор сюит</p>
+            <p class="search-text">
+                Двухкомнатный номер общей площадью 38,8 кв.м, состоит из гостиной, спальни с двухспальной кроватью 160х200 см и ванной комнаты (душевая кабина, унитаз, раковина, шкаф, фен).
+            </p>
+        </div>
+
+        <!-- Для мобильной версии -->
+        <div class="hide-desktop">
+            <div class="welcome" style="background-image:url('./img/others/backgrounds/room-bg.png');">
+                <div class="breadcrumbs breadcrumbs-white">
+                    <a href="/">Главная</a>
+                    <a href="/">Размещение в номерах</a>
+                    <span>Джуниор сюит</span>
+                </div>
+                <p class="search-caption">Джуниор сюит</p>
+                <p class="search-text">
+                    Двухкомнатный номер общей площадью 38,8 кв.м, состоит из гостиной, спальни с двухспальной кроватью 160х200 см и ванной комнаты (душевая кабина, унитаз, раковина, шкаф, фен).
+                </p>
+            </div>
+
+            <a href="#" id="select_date" class="select-date" data-empty="" data-holidays="">
+
+                <div id="date_in" class="date-wrap in">
+                    <p class="label">Дата заезда</p>
+                    <div class="date">
+                        <p class="day"></p>
+                        <p class="month"></p>
+                        <p class="weekday"></p>
+                    </div>
+                </div>
+
+                <div id="date_out" class="date-wrap out">
+                    <p class="label">Дата выезда</p>
+                    <div class="date">
+                        <p class="day"></p>
+                        <p class="month"></p>
+                        <p class="weekday"></p>
+                    </div>
+                </div>
+
+                <div class="nights">
+                    <i class="icon icon-moon"></i>
+                    <p></p>
+                </div>
+            </a>
+
+            <div class="hr"></div>
+
+            <div id="select_rooms_guest_count">
+                <div class="select-count">
+                    <a href="#" class="button-action minus disable"><i class="icon icon-minus"></i></a>
+                    <div class="count-field">
+                        <div class="label">Номеров</div>
+                        <input type="number" class="number" data-type="rooms" value="1" data-min="1" data-max="9">
+                    </div>
+                    <a href="#" class="button-action plus"><i class="icon icon-plus"></i></a>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="select-count">
+                    <a href="#" class="button-action minus disable"><i class="icon icon-minus"></i></a>
+                    <div class="count-field">
+                        <div class="label">Взрослых</div>
+                        <input type="number" class="number" data-type="adults" value="2" data-min="1" data-max="9">
+                    </div>
+                    <a href="#" class="button-action plus"><i class="icon icon-plus"></i></a>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="select-count">
+                    <a href="#" class="button-action minus disable"><i class="icon icon-minus"></i></a>
+                    <div class="count-field">
+                        <div class="label">Детей</div>
+                        <input type="number" class="number" data-type="childs" value="0" data-min="0" data-max="4">
+                    </div>
+                    <a href="#" class="button-action plus"><i class="icon icon-plus"></i></a>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="childs-age hide">
+                    <p class="label">Возраст детей</p>
+                    <div class="childs-age-selects">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Для мобильной версии -->
+
+        <form class="form" method="POST" action="#/api/bookings.getAvailableBookings2">
+            <div class="field-col hide-mobile" data-reserv_rangepicker data-empty="" data-holidays="">
+                <div class="field for-date" data-date_start="">
+                    <i class="icon icon-in"></i>
+                    <span class="text" data-date></span>
+                    <span class="text gray" data-weekday></span>
+                    <input type="hidden" name="date_start" value="">
+                </div>
+                <div class="field for-date" data-date_end="">
+                    <i class="icon icon-in"></i>
+                    <span class="text" data-date></span>
+                    <span class="text gray" data-weekday></span>
+                    <input type="hidden" name="date_end" value="">
+                </div>
+            </div>
+            <div class="field-col hide-mobile">
+                <div class="select-guests-wrapper" data-reserv_select_guests="">
+                    <div class="field" data-button_popup>
+                        <i class="icon icon-person"></i>
+                        <span class="text" data-value_text></span>
+                    </div>
+                    <div class="popup-fields" data-popup_fields>
+                        <div class="item">
+                            <span class="item-label">Номеров</span>
+                            <div class="control" data-type="rooms">
+                                <a href="#" class="action-button minus disable"><i class="icon icon-minus"></i></a>
+                                <input type="text" value="1" name="count_rooms" data-count_rooms_field
+                                       class="number" maxlength="1" data-min="1" data-max="9">
+                                <a href="#" class="action-button plus"><i class="icon icon-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="item-label">Взрослых</span>
+                            <div class="control" data-type="adults">
+                                <a href="#" class="action-button minus"><i class="icon icon-minus"></i></a>
+                                <input type="text" value="2" name="count_adults"
+                                       data-count_adults_field class="number" maxlength="1" data-min="1"
+                                       data-max="9">
+                                <a href="#" class="action-button plus"><i class="icon icon-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="item-label">Детей</span>
+                            <div class="control" data-type="childs">
+                                <a href="#" class="action-button minus disable"><i class="icon icon-minus"></i></a>
+                                <input type="text" value="0" name="count_childs" class="number"
+                                       data-count_childs_field maxlength="1" data-min="0" data-max="4">
+
+                                <a href="#" class="action-button plus"><i class="icon icon-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="item childs-age hide" data-childs_age>
+                            <span class="label-childs">Возраст детей</span>
+                            <div class="childs-age-selects" data-childs_age_selects></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="button">Найти номера <br>по лучшей цене</button>
+
+            <input type="hidden" name="channel" value="136">
+
+            <div class="clr"></div>
+        </form>
+
+        <div style="display: none;">
+            <input type="hidden" id="language" value="ru">
+        </div>
+
+    </div>
+</div>
+
+
+<div class="section sections-block p-b-0">
+    <div class="container">
+        <div class="info-icons info-icons__big">
+            <div class="row">
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-square"></span>
+                        <span class="text ">Площадь: 60,39 м²</span>
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-bed-double"></span>
+                        <span class="text ">1 большая кровать</span>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-person"></span>
+                        <span class="text ">До 2 взрослых</span>
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section sections-block p-b-0">
+    <div class="container">
+        <h2 class="m-t-0">В номере</h2>
+        <div class="info-icons info-icons__small">
+            <div class="row">
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-drink"></span>
+                        <span class="text ">Бар</span>
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-bathtub"></span>
+                        <span class="text ">Ванная комната</span>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-wardrobe"></span>
+                        <span class="text ">Шкаф</span>
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-safe"></span>
+                        <span class="text ">Сейф в номере</span>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-hair-dryer"></span>
+                        <span class="text ">Фен</span>
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-tv"></span>
+                        <span class="text ">Телевизор</span>
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-snowflake"></span>
+                        <span class="text ">Холодильник</span>
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-wifi"></span>
+                        <span class="text ">Wi-Fi</span>
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet">
+                    <div class="item">
+                        <span class="icon icon-view"></span>
+                        <span class="text ">Вид на Жигулевский горы</span>
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gallery__slider">
+    <div class="gallery__slider-wrapper">
+        <div class="gallery__slider-close"></div>
+        <div class="gallery-prev">
+            <span class="icon-up-arrow-3"></span>
+        </div>
+        <div class="gallery__slider-big"></div>
+        <div class="gallery-next">
+            <span class="icon-up-arrow-3"></span>
+        </div>
+        <div class="gallery__slider-small"></div>
+    </div>
+</div>
+<div class="section sections-block p-b-0">
+    <div class="container">
+        <h2 class="m-t-0">Галерея</h2>
+        <div class="gallery">
+            <div class="row">
+                <div class="col w-33 w-50-tablet w-50-mobile gallery__item" data-slide="1">
+                    <div class="item">
+                        <img alt="1" src="./img/others/room/item-1.png">
+                    </div>
+                </div>
+                <div class="col w-33 w-50-tablet w-50-mobile gallery__item" data-slide="2">
+                    <div class="item">
+                        <img alt="2" src="./img/others/room/item-2.png">
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet w-50-mobile gallery__item" data-slide="3">
+                    <div class="item">
+                        <img alt="3" src="./img/others/room/item-3.png">
+                    </div>
+                </div>
+                <div class="clr hide-mobile hide-tablet"></div>
+                <div class="col w-33 w-50-tablet w-50-mobile gallery__item" data-slide="4">
+                    <div class="item">
+                        <img alt="4" src="./img/others/room/item-4.png">
+                    </div>
+                </div>
+                <div class="clr hide-desktop"></div>
+                <div class="col w-33 w-50-tablet w-50-mobile gallery__item" data-slide="5">
+                    <div class="item">
+                        <img alt="5" src="./img/others/room/item-5.png">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
